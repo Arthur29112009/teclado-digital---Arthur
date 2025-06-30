@@ -1,6 +1,26 @@
 :root{
     --cinza: rgb(187, 183, 183);
---azul: blue;
+--azul: rgb(32, 32, 230);
+--vermelho: rgb(184, 0, 0);
+--preto:black;
+--verde: rgb(32, 124, 32);
+--amarelo: rgb(235, 235, 11);
+--roxo:
 
+}
+
+body{
+background-color:var(--preto);
+align-items: center;
+display: flex;
+justify-content: center;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+min-height: 100vh;
+}
+
+h1{
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color:var(--azul)
 }
     
