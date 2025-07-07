@@ -1,0 +1,20 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main # Altere para a branch que você usa para seu código-fonte (por exemplo, master)
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v4 # Clona seu repositório
+
+      - name: Deploy 🚀
+        uses: peaceiris/actions-gh-pages@v4 # Ação para fazer o deploy no GitHub Pages
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }} # Token de acesso automático do GitHub
+          publish_dir: ./ # O diretório que contém seus arquivos HTML/CSS (raiz do repositório)
+          # publish_branch: gh-pages # Descomente se você quiser publicar em uma branch 'gh-pages' separada
